@@ -1,0 +1,551 @@
+<html>
+<head>
+<title>Edit Media</title>
+<style type="text/css">
+	.body{
+	margin:0;
+	padding:0;
+	font-family:'Ibarra Real Nova',serif;
+	}
+
+	.Backgroundcolor{
+	background-color:#eaeffa;
+	margin:0;
+	padding:0;
+	font-family:'Ibarra Real Nova',serif;
+	}
+
+	.topimage{
+	margin-left: auto;
+        margin-right: auto;
+	height:1600px;
+  	}
+
+	.Backgroundcolor1{
+	background-color:#dce5eb;
+	margin:0;
+	padding:0;
+	font-family:'Ibarra Real Nova',serif;
+	margin-left: auto;
+        margin-right: auto;
+	height:1150px;
+	}
+
+	.center {
+       	display: flex;
+  	justify-content: center;
+        width:50%;
+        padding-top:10px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-left:400px;
+       }
+
+	.topbar{
+	padding-left:33%;
+	overflow: hidden;
+ 	background-color: #eaeffa;}
+    
+	.topmenu{
+        float: left;
+  	color: #555555;
+ 	text-align: center;
+ 	padding: 14px 16px;
+ 	text-decoration: none;
+ 	font-size: 20px;}
+
+	.column{
+	position:relative;
+ 	margin-bottom:50px;
+	text-align:right;
+	float: left;
+ 	width: 60%;
+ 	height: 400px; /* Should be removed. Only for demonstration */
+	background-color:#eaeffa;
+	font-size: 400%;
+	margin-bottom:100%;
+	}
+	
+	.row{position:relative;
+	float:left;
+	width: 37%;
+ 	padding: 10px;
+ 	height: 300px; 
+	background-color:#eaeffa;}
+
+	.slider-frame
+	{margin-top:30%;
+	margin-left:25%;
+        width:700px;
+	height:700px;
+
+	background:url(unit1_1.png);
+	animation:slide 20s infinite;
+	}
+	
+	@keyframes slide{
+	25%{
+	background:url(unit3_1.png);
+	}
+	50%{
+	background:url(unit2_1.png);
+	}
+	75%{
+	background:url(unit1_1.png);
+	}
+	100%{
+	background:url(unit4_1.png);
+	}
+	}
+
+	.imagebar{
+	position:absolute;
+	margin-top:80px;
+	float:left;
+	}
+
+	.fixed-bg {
+	background-image: url("marble2.jpg");
+ 	height: 1000px;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	margin:0;
+	padding:0;
+	font-family:Ibarra Real Nova,serif;
+	}
+
+	.bg-text{
+	color: black;
+	font-size: 80px;
+  	position:relative;
+  	top:45%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	z-index: 2;
+  	width: 500px;
+  	padding: 20px;
+  	text-align: center;
+	}
+
+	.maintext{
+	background-color:blue;
+	}
+
+	.button {
+ 	background-color: white;
+  	border: none;
+  	color: black;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	margin: 4px 2px;
+  	cursor: pointer;
+	}
+
+	.container1{
+    	width: available;
+    	height: available;
+	}
+
+	.leftpane{
+	position:relative;
+	text-align:center;
+    	width: 30%;
+	margin-left:5%;
+    	min-width: 400px;
+    	height: available;
+    	min-height: 400px;
+    	float: left;
+	}
+
+	.middlepane{
+	position:relative;
+	text-align:center;
+   	width: 30%;
+   	min-width: 400px;
+   	height: available;
+   	min-height: 400px;
+   	float: left;
+
+	}
+
+	.rightpane1{
+	text-align:center;
+	position:relative;
+	position:relative;
+    	width: available;
+    	min-width: 460px;
+   	height: available;
+   	min-height: 400px;
+   	float:left;
+	}
+
+	.text{
+	text-align:center;
+	font-size:30px;
+        }
+	
+	section{
+	padding-bottom:7%;
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	  height: 700px;
+	  width:100%;
+	background:#2169f3;}
+
+	section::before
+	{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:50%;
+	height:100%;
+	background:#03a9f4;
+	}
+
+	section .container{
+	position:relative;
+	min-width:1100px;
+	min-height:550px;
+	display: flex;
+	z-index:1000;
+	}
+
+	section .container .contactinfo{
+	position:absolute;
+	top:40px;
+	width:350px;
+	height: calc(100% - 80px);
+	background: #0f3959;
+	z-index:1;
+	padding:40px;
+	display:flex;
+	justify-content:space-between;
+	box-shadow: 0 20px 20px rgba(0, 0,0,0.2);
+	}
+
+	section .container .contactinfo h2{
+	color:#fff;
+	font-size:24px;
+	font-weight:500;
+	}
+
+	section .container .contactinfo .info{
+	position:relative;
+	margin:20px 0;
+	}
+
+	section .container .contactinfo .info li{
+	position:relative;
+	list-style:none;
+	display:flex;
+	margin:20px 0;
+	cursor:pointer;
+	align-items:flex-start;
+	}
+
+ 	section .container .contactinfo .info li span:nth-child(1){
+	width:30px;
+	min-width:30px;
+	}
+
+	section .container .contactinfo .info li span:nth-child(1) img{
+	max-width:100%;
+	filter:invert(1);
+	opacity:0.5;
+	}
+	
+	section .container .contactinfo .info li span:nth-child(2){
+	color:#fff;
+	margin-left:10px;
+	font-weight:300;
+	}
+
+	section .container .contactinfo .info li:hover span:nth-child(1) img,
+	section .container .contactinfo .info li:hover span:nth-child(2) 
+	{
+	opacity:1;
+	}
+
+	section .container .contactinfo .sci{
+	position:relative;
+	display:flex;
+	}
+
+	section .container .contactinfo .sci li
+	{
+	List-style:none;
+	margin-right:15px;
+	}
+
+	section .container .contactinfo .sci li a img{
+	filter:invert(1);
+	opacity:0.5;
+	}
+
+	section .container .contactinfo .sci li:hover a img{
+	opacity:1;
+	}
+
+	section .container .contactForm
+	{
+	float:left;
+	position:absolute;
+	padding:70px 50 px;
+	background:#fff;
+	margin-left: 200px;
+	padding-left: 300px;
+	width: calc(80% - 150px);
+	height: 115%;
+	box-shadow:0 50px 50px rgba(0,0,0,0.5);
+	}
+
+	section .container .contactForm h2{
+	color:#0f3959;
+	font-size: 24px;
+	font-weight: 500;
+	} 
+
+ 	section .container .contactForm .formbox{
+	position:relative;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	}
+
+	section .container .contactForm .formbox .inputbox
+	{
+	position:relative;
+	margin: 0 0 35px 0;
+	}
+
+	section .container .contactForm .formbox .inputBox.w50
+	{
+	width:40%;
+	}
+
+	textarea {
+	width: 400px;
+	height: 150px;
+	}
+
+	section .container .contactForm .formbox .inputBox.w100
+	{
+	width:100%;
+	}
+
+	section .container .contactForm .formbox .inputBox input
+	{
+	width:100%;
+	font-size:18px;
+	resize:none;
+	color:#333;
+	border:none;
+	border-bottom:1px solid #777;
+	outline:none;
+	}
+
+
+</style>
+</head>
+
+<body class="body">
+<div class="topimage backgroundcolor">
+<div class="center">
+<img src="Edit.png" style="width:300px;height:150px;" >
+</div>
+<hr>
+<div class="topbar">
+<span class="topmenu">Home</span>
+<span class="topmenu">Gallery</span>
+<span class="topmenu">Contact</span>
+<span class="topmenu">Feature Work</span>
+<span class="topmenu">About Us</span>
+</div> 
+<hr>
+<div class="column">
+<h1 style="padding-left:5%;">Who are we?</h1>
+<p style="font-size:20px;">Following this mantra, Editmediagraphics, a social media agency strives to deliver exclusive<br> 
+                           and best content and design for your brands. Since Brand building is the most important part<br>
+                           for the growth of any business, we are determined to give your business not just a name, but<br>
+			   also the voice in the masses.</p>
+</div>
+<div class="row">
+<img src="qoute.png" style="width:80px;height:90px;float:right;padding-right:150px;padding-top:120px;"><br><br><br><br><br><br><br><br><br><br><br>
+<h2 style="padding-left:200px;padding-right:150px;text-align:right;font-size:20px;color:#999999;line-height:200%">There are three responses to a piece of design- Yes, No and Wow. WOW is the one to aim for.<br><br></h2>
+<h1 style="padding-left:200px;padding-right:150px;text-align:right;font-size:20px;"> Milton Glaser.</h1>
+</div>
+
+<div class="slider-frame">	
+</div>
+
+<div class="imagebar">
+<img src="media1.png" style="width:130%;height:500px;">
+</div>
+</div>
+
+<div class="fixed-bg">
+
+<div class="bg-text">What we do?<br> 
+<h3 style="font-size:20px;">Graphics . Media . Animation</h3>
+
+<p style="text-align:center;font-size:20px;">Editmediagraphics gives your brand and business a different<br>
+   feeling all together. We design your social media content,<br>
+   websites and also take care of your advertising campaigns.<br>
+   We are passionate enough to carve out imagination and grace <br>
+   to make your brand stand tall in the market.<br><br>
+</p>
+<button class="button">Read More</button>
+<br>
+<p style="font-size:70px;text-align:center;line-height: 20%;">
+Featured Work 
+<h3 style="font-size:25px;">What We Do Best</h3></p>
+</div>
+</div>
+
+<div class="topimage backgroundcolor" style:"margin:0px;padding:0px;">
+<div class="container1">
+
+<div class="leftpane">
+<video style="background-color:black;margin-rignt:10px;" width="410" height="300" controls autoplay>
+<source src=" video.mp4" type="video/mp4"></video>
+<h2 style="font-size:40px;text-align-center">Video Production</h2>
+<p style="font-size:20px;">We at Editmediagraphics, believe keeping <br>
+           		   your content simple yet elegant. We create<br>
+			   and produce the most unique visual and <br>
+                           graphic content for your brand. From <br>
+			   creative fun and engaging content, we<br>
+			   are there to give a complete avatar to<br>
+			   your brand.<br><br>
+<button class="button">Get in touch</button>
+</div>
+
+<div class="middlepane">
+<video style="background-color:black;margin-rignt:10px;" width="410" height="300" controls autoplay>
+<source src="animation.mp4" type="video/mp4"></video>
+<h2 style="font-size:40px;text-align-center">Animation</h2> 
+<p style="font-size:20px;">Can animation be utilized and  leveraged<br>
+                           for your business? certainly yes.<br>
+                           If you need engagements to your brand,<br>
+			   we are there to help you. We evoke <br>
+			   emotions that resonate with viewers <br>
+			   through our animation technique. It sparks<br>
+			   conversation and makes your brand <br>
+			   interesting.<br><br>
+<button class="button">Get in touch</button>
+</div>
+
+<div class="rightpane1">
+<video style="background-color:black;margin-rignt:10px;" width="410" height="300" controls autoplay>
+<source src="Marketing.mp4" type="video/mp4"></video>
+<h2 style="font-size:40px;text-align-center">Marketing</h2> 
+<p style="font-size:20px;">Marketing is the activity, set of institutions,<br>
+		 	   and processes for creating, communicating.<br>
+			   Through advertising, your brand can expand<br>
+		           your market. That's the power of this medium.<br>
+			   Editmediagraphics uses advertising to greater<br>
+			   content to make your brand competitive and<br>
+			   numero uno in the market.<br><br>
+<button class="button">Get in touch</button>
+</div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<div>
+<img src="milton.png" style="width:100px;height:100px;padding-left:710px;" ><br>
+<h2 style="text-align:center;">Milton Glaser</h2>
+<img src="qoute1.png" style="width:30px;height:30px;padding-left:745px;" ><br>
+<p style="text-align:center;font-size:20px;"> "There are three responses to a piece of design- Yes, No and Wow. WOW is the one to aim for"<p>
+</div>
+<br><br>
+
+<h1 style="padding-bottom:10px;text-align:center;font-size:50px;">Contact us</h1>
+<section>
+
+<div class="container">
+
+<div class="contactinfo">
+<div>
+<h2>Contact Info</h2>
+<ul class="info">
+	<li>	
+	    <span><img style="width:90px;height:50px;" src="location.png"></span>
+            <span> 275 Shukrawar Peth<br>
+			 Pune 411 002<br>
+	</li>
+	<li>	
+	    <span><img style="width:70px;height:50px;" src="mail.png"></span>
+            <span>editmediagraphics@gmail.com<br><span>
+	</li>
+	<li>	
+	    <span><img style="width:70px;height:50px;" src="call.png"></span>
+            <span>+91 7350 560 768<br><br><span>
+	</li>
+</ul>
+
+<ul class="sci" style="padding-top:140px;">
+	<li><a href="#"><img style="width:40px;height:40px;" src="1.png"></a></li>
+	<li><a href="#"><img style="width:40px;height:40px;" src="2.png"></a></li>
+	<li><a href="#"><img style="width:40px;height:40px;" src="3.png"></a></li>
+	<li><a href="#"><img style="width:40px;height:40px;" src="4.png"></a></li>
+	<li><a href="#"><img style="width:40px;height:40px;" src="5.png"></a></li>
+</ul>
+</div>
+</div>
+<div class="contactForm" style="padding-top:2%">
+	<h2>Send a Message</h2>
+	<div class="formBox">
+		<div class="inputBox w50">
+			<input type="text" name="" required>
+			<span>First Name</span>
+	</div>
+	<div class="formBox">
+		<div class="inputBox w50">
+			<input type="text" name="" required>
+			<span>Last Name</span>
+	</div>
+	<div class="formBox">
+		<div class="inputBox w50">
+			<input type="text" name="" required>
+			<span>Email Address</span>
+	</div>
+	<div class="formBox">
+		<div class="inputBox w50">
+			<input type="text" name="" required>
+			<span>Mobile Number</span>
+	</div>
+	<div class="formBox" >
+		<div class="inputBox w100">
+			<textarea name="" required></textarea>
+			<span>Write your message here...</span>
+	</div>
+	<div class="formBox">
+		<div class="inputBox w100">
+			<button style="background-color:white;">
+			<input type="submit" value="Send"></button>
+	</div>
+
+
+</div>
+</div>
+</section>
+
+<div class="backgroundcolor1" style:"margin:0px;padding:0px;>
+<img style="padding-left:20px;padding-right:20px;padding-top:20px;width:97%;" src="phone.png"><br><br><br><br><br>
+<br><br><br><br><br><br>
+<h1 style="text-align:center;font-size:40px;">Edit</h1>
+<p style="text-align:center;font-size:20px;">+91 7350 560 768</p>
+<p style="text-align:center;font-size:20px;">©2023 by Editmediagraphics Proudly created with Wix.com</p>
+</div>
+
+</div>
+
+</body>
+</html>
